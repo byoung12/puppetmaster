@@ -5,8 +5,8 @@ class sudo {
 
 if $operatingsystem == "ubuntu" { 
     package { "sudo-ldap":
-	ensure => present
-	require => 	
+	ensure => present,
+	require => Package["sudo"], 	
     }
 }
 
